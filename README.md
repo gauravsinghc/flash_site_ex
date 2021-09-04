@@ -11,7 +11,7 @@ Things you may want to cover:
 * Database creation
 rake db:create
 rake db:migrate
-rake db:seed # Run To Add Userd
+rake db:seed # To Add User
 
 * Login
 - pass "users/1" in url ex: localhost:3000/users/1, where 1 is id
