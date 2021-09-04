@@ -1,0 +1,8 @@
+%main
+  %section.py-5.text-center.container
+    .row.py-lg-5
+      .col-lg-6.col-md-8.mx-auto
+        - if @user.present?
+          = render partial: "today_deal"
+        - else 
+          %h1.fw-light Login To See Our Deals

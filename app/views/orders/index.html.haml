@@ -1,0 +1,22 @@
+%main
+  %section.py-5.text-center.container
+    .row.py-lg-5
+      .col-lg-6.col-md-8.mx-auto
+        %h1.fw-light Deal Grabbed
+
+%table.table
+  %thead
+    %tr
+      %th{:scope => "col"} Title
+      %th{:scope => "col"} Price
+      %th{:scope => "col"} Discount
+      %th{:scope => "col"} Image
+  %tbody
+    - @orders.each do |order|
+      %tr
+        - deal = order.order_details.first.deal
+        %th{:scope => "row"}= deal.title
+        %td= order.grand_total.to_f
+        %td= order.discount.to_f
+        - if deal.image.attached?
+          %td= image_tag deal.image, :style => "width: 50px"

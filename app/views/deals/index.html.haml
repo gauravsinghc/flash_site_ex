@@ -1,0 +1,29 @@
+
+%table.table
+  %thead
+    %tr
+      %th{:scope => "col"} Edit
+      %th{:scope => "col"} Title
+      %th{:scope => "col"} Description
+      %th{:scope => "col"} Price
+      %th{:scope => "col"} Discounted Price
+      %th{:scope => "col"} Quantity
+      %th{:scope => "col"} Publish Date
+      %th{:scope => "col"} Active
+      %th{:scope => "col"} Image
+  %tbody
+    - @deals.each do |deal|
+      %tr
+        %th{:scope => "row"}= link_to "Edit Deal", edit_deal_path(deal)
+        %th{:scope => "row"}= deal.title
+        %td= deal.description
+        %td= deal.price
+        %td= deal.discounted_price
+        %td= deal.quantity
+        %td= deal.publish_date
+        %td= deal.active
+        - if deal.image.attached?
+          %td= image_tag deal.image, :style => "width: 50px"
+
+= link_to "Today Deal", root_path
+= link_to "New Deal", new_deal_path

@@ -1,0 +1,89 @@
+h1 {  
+  text-decoration: underline;  
+}  
+.card {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  float: left;
+  font-family: 'Lato', Arial, sans-serif;
+  font-size: 16px;
+  margin: 10px 24%;
+  max-width: 310px;
+  min-width: 250px;
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+  width: 100%;
+}
+body {
+  background: #eee;
+}
+.ratings {
+  i {
+    font-size: 14px;
+    margin-right: 2px;
+  }
+}
+.p-description {
+  font-size: 12px;
+  margin-top: 11px;
+}
+label.radio {
+  cursor: pointer;
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    pointer-events: none;
+    &:checked+span {
+      border-color: #8f37aa;
+      background-color: #8f37aa;
+      color: #fff;
+    }
+  }
+  span {
+    padding: 3px 9px;
+    border: 1px solid #8f37aa;
+    display: inline-block;
+    color: #8f37aa;
+    border-radius: 5px;
+    font-size: 11px;
+    text-transform: uppercase;
+  }
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.deal_form {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+
+
+// Import Bootstrap v5  
+@import "~bootstrap/scss/bootstrap";

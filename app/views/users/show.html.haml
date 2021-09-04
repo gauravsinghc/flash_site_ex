@@ -1,0 +1,13 @@
+- if @user.present?	
+	.d-flex.justify-content-center.container.mt-5
+		.card.p-3.py-4
+			%h5.mb-0 Login Succesful
+			%span.text-black-50.p-description
+				%strong= @user.name
+				%br/
+			%span.text-black-50.p-description
+				%strong= @user.email_id
+- else
+	.d-flex.justify-content-center.container.mt-5
+		.card.p-3.py-4
+			%h5.mb-0 Login In
